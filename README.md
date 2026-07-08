@@ -17,6 +17,8 @@ java -version
 
 ## Chuẩn bị
 
+Tải downloader [tại đây](https://github.com/ruinelia/dusp-modpack-downloader/releases/latest).
+
 Trước khi chạy downloader, hãy đảm bảo:
 
 - Đã tạo hoặc chọn thư mục Minecraft (ví dụ: `.minecraft`, Prism Launcher, MultiMC hoặc Modrinth App).
