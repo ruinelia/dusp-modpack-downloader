@@ -24,7 +24,7 @@ kotlin {
 tasks.shadowJar {
     archiveClassifier.set("")
     archiveVersion.set("")
-    archiveBaseName.set("installer")
+    archiveBaseName.set("downloader")
 
     manifest {
         attributes["Main-Class"] = "com.ruineko.MainKt"
