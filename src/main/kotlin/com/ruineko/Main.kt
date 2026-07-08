@@ -25,13 +25,13 @@ fun main() = runBlocking {
     val totalSize = manifest.files.sumOf { it.size }
 
     println()
-    println("Information about the modpack to be installed.")
-    println("Name      : ${manifest.name}")
-    println("Version   : ${manifest.version}")
-    println("Minecraft : ${manifest.minecraft}")
-    println("Loader    : ${manifest.loader.type} ${manifest.loader.version}")
-    println("Files     : ${manifest.files.size}")
-    println("Size      : ${formatSize(totalSize)}")
+    println("Manifest information:")
+    println("  Name      : ${manifest.name}")
+    println("  Version   : ${manifest.version}")
+    println("  Minecraft : ${manifest.minecraft}")
+    println("  Loader    : ${manifest.loader.type} ${manifest.loader.version}")
+    println("  Files     : ${manifest.files.size}")
+    println("  Size      : ${formatSize(totalSize)}")
     println()
 
     val jarDirectory = Paths.get(object {}.javaClass.protectionDomain.codeSource.location.toURI()).parent
@@ -80,14 +80,14 @@ fun main() = runBlocking {
                     val status = try {
                         if (file.once && Files.exists(output)) {
                             skipped.incrementAndGet()
-                            "Skipped (once)"
+                            "Skipped (file marked as 'once')"
                         } else if (
                             Files.exists(output) &&
                             Files.size(output) == file.size &&
                             sha1(output).equals(file.sha1, ignoreCase = true)
                         ) {
                             skipped.incrementAndGet()
-                            "Already downloaded"
+                            "Skipped (already downloaded)"
                         } else {
                             download(file.url, output)
                             success.incrementAndGet()
