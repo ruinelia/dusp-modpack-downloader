@@ -75,7 +75,11 @@ fun main() = runBlocking {
                     Files.createDirectories(output.parent)
 
                     val status = try {
-                        if (Files.exists(output) &&
+                        if (file.once && Files.exists(output)) {
+                            skipped.incrementAndGet()
+                            "Skipped (once)"
+                        } else if (
+                            Files.exists(output) &&
                             Files.size(output) == file.size &&
                             sha1(output).equals(file.sha1, ignoreCase = true)
                         ) {

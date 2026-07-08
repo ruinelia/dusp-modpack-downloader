@@ -16,7 +16,9 @@ data class ManifestFile(
     val path: String,
     val url: String,
     val sha1: String,
-    val size: Long
+    val size: Long,
+    val once: Boolean = false,
+    val optional: Boolean = false
 )
 
 @Serializable
