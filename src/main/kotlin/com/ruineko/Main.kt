@@ -14,7 +14,7 @@ private const val DOWNLOAD_THREADS = 8
 fun main() = runBlocking {
     print("Manifest URL (leave blank for default)\n> ")
     val manifestUrl = readln().ifBlank {
-        println("\n:: Using default manifest URL: $DEFAULT_MANIFEST_URL")
+        println("\n:: Using default manifest URL.")
         DEFAULT_MANIFEST_URL
     }
 
@@ -37,13 +37,16 @@ fun main() = runBlocking {
     val jarDirectory = Paths.get(object {}.javaClass.protectionDomain.codeSource.location.toURI()).parent
 
     print("Where should the modpack be downloaded? (leave blank to use current directory)\n> ")
-    val installPathInput = readln()
-    val installPath = if (installPathInput.isBlank()) {
-        println("\n:: Using current directory as download path.")
-        jarDirectory
-    } else Paths.get(installPathInput)
+    val downloadPath = readln().let { input ->
+        if (input.isBlank()) {
+            println("\n:: Using current directory as download path.")
+            jarDirectory
+        } else {
+            Paths.get(input)
+        }
+    }
 
-    Files.createDirectories(installPath)
+    Files.createDirectories(downloadPath)
 
     println()
     println("Please ensure you have a stable internet connection.")
@@ -71,7 +74,7 @@ fun main() = runBlocking {
         manifest.files.map { file ->
             launch(Dispatchers.IO) {
                 semaphore.withPermit {
-                    val output = installPath.resolve(file.path)
+                    val output = downloadPath.resolve(file.path)
                     Files.createDirectories(output.parent)
 
                     val status = try {
