@@ -1,6 +1,6 @@
-# DuSenpai SS4 Modpack Downloader
+# DuSenpai Minecraft Season 4 Modpack Downloader
 
-Công cụ tải và cập nhật modpack **DuSenpai SS4**.
+Công cụ tải và cập nhật modpack **DuSenpai Minecraft Season 4**.
 
 ## Yêu cầu
 
