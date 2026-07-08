@@ -40,3 +40,33 @@ private fun download0(url: String, output: Path) {
         }
     }
 }
+
+fun fetch(url: String): String {
+    repeat(MAX_RETRIES) { attempt ->
+        try {
+            return fetch0(url)
+        } catch (e: Exception) {
+            if (attempt == MAX_RETRIES - 1) {
+                throw e
+            }
+
+            Thread.sleep(1000L * (attempt + 1))
+        }
+    }
+
+    error("Unreachable")
+}
+
+private fun fetch0(url: String): String {
+    val request = Request.Builder()
+        .url(normalizeUrl(url))
+        .build()
+
+    client.newCall(request).execute().use { response ->
+        if (!response.isSuccessful) {
+            throw IOException("HTTP ${response.code}")
+        }
+
+        return response.body.string()
+    }
+}
