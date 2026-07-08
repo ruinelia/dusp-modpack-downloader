@@ -16,7 +16,7 @@ java -version
 
 1. Tạo một **thư mục trống** ở vị trí mà Java có quyền ghi dữ liệu.
 2. Sao chép `downloader.jar` vào thư mục đó.
-3. Mở Command Prompt (CMD) tại thư mục chứa `downloader.jar`.
+3. Mở Terminal tại thư mục chứa `downloader.jar`.
 4. Chạy lệnh:
 
 ```bash
@@ -29,7 +29,7 @@ Chương trình sẽ lần lượt yêu cầu:
 
 Nhập đường dẫn đến file `manifest.json`.
 
-- Nhấn **Enter** để sử dụng [URL mặc định](https://raw.githubusercontent.com/DemoVPS69420/modpacklauncherupdater/main/manifest.json).
+- Nhấn **Enter** để sử dụng [đường dẫn mặc định](https://raw.githubusercontent.com/DemoVPS69420/modpacklauncherupdater/main/manifest.json).
 
 ### Thư mục tải xuống
 
@@ -37,7 +37,7 @@ Nhập đường dẫn đến thư mục muốn tải modpack vào.
 
 - Nhấn **Enter** để sử dụng thư mục hiện tại.
 
-Sau khi hiển thị thông tin modpack, nhấn **Y** hoặc **Enter** để bắt đầu tải.
+Sau khi hiển thị thông tin modpack, nhập **Y** hoặc nhấn **Enter** để bắt đầu tải.
 
 Khi hoàn tất, chỉ cần sao chép toàn bộ các file đã tải vào thư mục Minecraft là có thể sử dụng.
 
@@ -58,6 +58,14 @@ Sau khi tải xong, sao chép các file mới vào Minecraft để cập nhật.
 ```
 
 Nếu không thêm tham số này, các tối ưu hóa SIMD sẽ không được kích hoạt.
+
+## Cần trợ giúp?
+
+Nếu gặp sự cố hoặc có thắc mắc, hãy xem [FAQ.md](FAQ.md).
+
+## Miễn trừ trách nhiệm
+
+Dự án này không trực thuộc hoặc đại diện cho ban quản lý máy chủ **DuSenpai Minecraft Season 4**. Đây là một công cụ do bên thứ ba phát triển nhằm hỗ trợ tải modpack.
 
 ## Giấy phép
 
