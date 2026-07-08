@@ -17,7 +17,7 @@ java -jar downloader.jar
 
 ---
 
-## Làm thế nào để mở Command Prompt hoặc Terminal ngay tại thư mục chứa `downloader.jar`?
+## Làm thế nào để mở Terminal ngay tại thư mục chứa `downloader.jar`?
 
 ### Windows
 
@@ -74,24 +74,27 @@ Hãy cài đặt Java 17 trở lên rồi thử lại.
 
 ## Tôi nên tải modpack vào đâu?
 
-Bạn nên tạo một **thư mục mới và trống**, sau đó tải toàn bộ file vào đó.
+Hãy chạy downloader trong **thư mục Minecraft** mà bạn muốn cài modpack.
 
-Sau khi tải xong, sao chép toàn bộ các file vào thư mục game của Minecraft.
+Ví dụ:
 
-- Với Minecraft Launcher, đây thường là thư mục `.minecraft`.
-- Với các launcher khác (Prism Launcher, MultiMC, Modrinth App, ...), hãy sao chép vào thư mục của instance tương ứng.
+- Minecraft Launcher: thư mục `.minecraft`
+- Prism Launcher: thư mục của instance
+- MultiMC: thư mục của instance
+- Modrinth App: thư mục của instance
 
-Việc tải vào một thư mục riêng sẽ giúp dễ kiểm tra và tránh ghi đè nhầm các file khác.
+Downloader sẽ tự tải mới hoặc cập nhật các tệp cần thiết. Những tệp được đánh dấu `once` sẽ không bị ghi đè nếu đã tồn tại.
 
 ---
 
 ## Khi modpack cập nhật thì phải làm gì?
 
-Chỉ cần chạy lại `downloader.jar` và tải phiên bản mới.
+Chỉ cần chạy lại `downloader.jar`.
 
-Sau khi tải xong, sao chép các file mới vào `.minecraft`.
-
-> Nếu không muốn mất các thiết lập cá nhân, hãy bỏ qua file `options.txt` khi sao chép.
+Downloader sẽ tự động:
+- tải các tệp còn thiếu;
+- cập nhật các tệp đã thay đổi;
+- giữ nguyên các tệp được đánh dấu `once`.
 
 ---
 
