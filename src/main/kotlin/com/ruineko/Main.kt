@@ -36,10 +36,10 @@ fun main() = runBlocking {
 
     val jarDirectory = Paths.get(object {}.javaClass.protectionDomain.codeSource.location.toURI()).parent
 
-    print("Install Path (leave blank to use current directory)\n> ")
+    print("Where should the modpack be downloaded? (leave blank to use current directory)\n> ")
     val installPathInput = readln()
     val installPath = if (installPathInput.isBlank()) {
-        println("\n:: Using current directory as install path.")
+        println("\n:: Using current directory as download path.")
         jarDirectory
     } else Paths.get(installPathInput)
 
@@ -47,18 +47,18 @@ fun main() = runBlocking {
 
     println()
     println("Please ensure you have a stable internet connection.")
-    print("Proceed with installation? [Y/n] (default: Y)\n> ")
+    print("Proceed with download? [Y/n] (default: Y)\n> ")
 
     when (readln().trim().lowercase()) {
         "", "y", "yes" -> Unit
         else -> {
             println()
-            println(":: Installation aborted.")
+            println(":: Operation cancelled.")
             return@runBlocking
         }
     }
 
-    println("\n:: Starting installation...")
+    println("\n:: Starting download...")
     println()
 
     val semaphore = Semaphore(DOWNLOAD_THREADS)
@@ -101,7 +101,7 @@ fun main() = runBlocking {
         }.joinAll()
     }
 
-    println("\n:: Installation completed.")
+    println("\n:: Operation completed.")
 
     println()
     println("Downloaded : ${success.get()}")
