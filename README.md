@@ -14,7 +14,7 @@ java -version
 
 ## Hướng dẫn sử dụng
 
-1. Tạo một **thư mục trống** ở vị trí mà Java có quyền ghi dữ liệu (ví dụ: Desktop hoặc Documents).
+1. Tạo một **thư mục trống** ở vị trí mà Java có quyền ghi dữ liệu.
 2. Sao chép `downloader.jar` vào thư mục đó.
 3. Mở Command Prompt (CMD) tại thư mục chứa `downloader.jar`.
 4. Chạy lệnh:
@@ -29,7 +29,7 @@ Chương trình sẽ lần lượt yêu cầu:
 
 Nhập đường dẫn đến file `manifest.json`.
 
-- Nhấn **Enter** để sử dụng URL mặc định.
+- Nhấn **Enter** để sử dụng [URL mặc định](https://raw.githubusercontent.com/DemoVPS69420/modpacklauncherupdater/main/manifest.json).
 
 ### Thư mục tải xuống
 
