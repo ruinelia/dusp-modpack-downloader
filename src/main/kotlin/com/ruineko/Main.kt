@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger
 
 private const val README_URL = "https://github.com/ruinelia/dusp-modpack-downloader/blob/master/README.md"
 private const val DEFAULT_MANIFEST_URL = "https://raw.githubusercontent.com/DemoVPS69420/modpacklauncherupdater/main/manifest.json"
-private const val DOWNLOAD_THREADS = 8
+private const val DOWNLOAD_THREADS = 10
 
 fun main() = runBlocking {
     print("Manifest URL (leave blank for default)\n> ")
