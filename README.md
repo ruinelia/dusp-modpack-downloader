@@ -3,7 +3,15 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![Java 17+](https://img.shields.io/badge/Java-17%2B-orange)
 
-Công cụ tải và cập nhật modpack **DuSenpai Minecraft Season 4**.
+Công cụ tải và cập nhật modpack **DuSenpai Minecraft Season 4** do bên thứ ba phát triển nhằm trợ tải modpack.
+
+# Điều khoản sử dụng
+
+Việc sử dụng công cụ này đồng nghĩa với việc:
+- Bạn đồng ý và tuân thủ các quy định của máy chủ **DuSenpai Minecraft**.
+- Công cụ được cung cấp theo nguyên trạng *(as is)*. Không có cam kết về việc modpack hoặc downloader sẽ luôn hoạt động chính xác, và sẽ không có hỗ trợ hoặc bồi thường nếu xảy ra sự cố.
+
+# Hướng dẫn sử dụng
 
 ## Yêu cầu
 
@@ -21,9 +29,14 @@ Tải downloader [tại đây](https://github.com/ruinelia/dusp-modpack-download
 
 Trước khi chạy downloader, hãy đảm bảo:
 
-- Đã tạo hoặc chọn thư mục Minecraft (ví dụ: `.minecraft`, Prism Launcher, MultiMC hoặc Modrinth App).
+- Đã tạo hoặc chọn thư mục chứa instance Minecraft (ví dụ: `.minecraft`, Prism Launcher, MultiMC hoặc Modrinth App).
 - Đã cài đúng phiên bản Fabric Loader mà modpack yêu cầu.
 - Đã cài phiên bản Java phù hợp với modpack.
+
+> **Lưu ý**:
+> Nếu instance đã từng được khởi chạy, Minecraft có thể đã tạo sẵn một số tệp cấu hình.
+> Downloader sẽ giữ nguyên các tệp được đánh dấu `once` và sẽ không ghi đè chúng.
+> Vui lòng tạo một instance trống nếu bạn muốn tải modpack.
 
 ## Tải modpack
 
@@ -82,4 +95,4 @@ Dự án này không trực thuộc hoặc đại diện cho ban quản lý máy
 
 ## Giấy phép
 
-Dự án được phát hành theo **MIT License**.
+Dự án được phát hành theo [MIT License](LICENSE).
