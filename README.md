@@ -54,13 +54,13 @@ Chương trình sẽ lần lượt yêu cầu:
 
 Nhập URL của tệp `manifest.json`.
 
-- Nhấn **Enter** để sử dụng [URL mặc định](https://raw.githubusercontent.com/DemoVPS69420/modpacklauncherupdater/main/manifest.json).
+- Để trống và nhấn **Enter** để sử dụng [URL mặc định](https://raw.githubusercontent.com/DemoVPS69420/modpacklauncherupdater/main/manifest.json).
 
 ### Thư mục tải xuống
 
 Nhập đường dẫn đến thư mục mà bạn muốn tải hoặc cập nhật modpack.
 
-- Nhấn **Enter** để sử dụng thư mục hiện tại.
+- Để trống và nhấn **Enter** để sử dụng thư mục hiện tại.
 - Nếu thư mục đã chứa modpack, downloader sẽ tải các tệp còn thiếu hoặc đã thay đổi.
 - Các tệp được đánh dấu `once` sẽ được giữ nguyên nếu chúng đã tồn tại.
 

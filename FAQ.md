@@ -108,4 +108,4 @@ Một số tính năng của modpack sử dụng SIMD để tăng hiệu năng.
 --add-modules jdk.incubator.vector
 ```
 
-Nếu không thêm tham số này, modpack vẫn có thể hoạt động, nhưng các tối ưu hóa SIMD sẽ không được sử dụng.
+Nếu không thêm tham số này, modpack vẫn có thể hoạt động, nhưng các tối ưu hóa SIMD sẽ không khả dụng.
